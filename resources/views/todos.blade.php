@@ -6,6 +6,13 @@
 <div class="row">
     <div class="col-md-10">
         <h2 class="text-center"> Your personal Todos </h2>
+
+        <form action="/create/new" method="post">
+            {{csrf_field()}}
+            <div class="form-control">
+                <input class="form-control form-control-lg" type="text" placeholder="Enter the Todo here" name="todo" />
+            </div>
+        </form>
     </div>
 </div>
 <hr/>
