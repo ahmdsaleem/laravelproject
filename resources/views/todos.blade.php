@@ -27,6 +27,7 @@
                     <td class="text-center">
                         {{ $todo->todo  }}
                         <a class="btn-sm btn-danger" href="{{ route('todo.delete',['id'=> $todo->id]) }}"> X </a>
+                        <a class="btn-sm btn-danger" href="{{ route('todo.update',['id'=> $todo->id]) }}"> Update </a>
                     </td>
                 </tr>
         @endforeach
