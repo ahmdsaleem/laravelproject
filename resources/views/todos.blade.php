@@ -27,7 +27,19 @@
                     <td class="text-center">
                         {{ $todo->todo  }}
                         <a class="btn-sm btn-danger" href="{{ route('todo.delete',['id'=> $todo->id]) }}"> X </a>
-                        <a class="btn-sm btn-danger" href="{{ route('todo.update',['id'=> $todo->id]) }}"> Update </a>
+                        <a class="btn-sm btn-info" href="{{ route('todo.update',['id'=> $todo->id]) }}"> Update </a>
+
+                        @if(!$todo->completed)
+                            <a class="btn-sm btn-success" href="{{ route('todo.completed',['id'=> $todo->id]) }}"> Mark as Complete </a>
+                        @else
+                            <i id="completedsign" class="fas fa-check-square"></i>
+                        @endif
+
+
+
+
+
+
                     </td>
                 </tr>
         @endforeach

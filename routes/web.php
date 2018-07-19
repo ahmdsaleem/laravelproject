@@ -20,6 +20,13 @@ Route::get('/todos/update/{id}',[
     'as' => 'todo.update'
 ]);
 
+Route::get('/todos/completed/{id}',[
+    'uses' => 'TodosController@completed',
+    'as' => 'todo.completed'
+]);
+
+
+
 Route::post('/todo/save/{id}',[
     'uses' => 'TodosController@save',
     'as' => 'todo.save'
